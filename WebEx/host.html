@@ -1,0 +1,84 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <title>My Page Title</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="img/favicon.svg" sizes="any" type="image/svg+xml" />
+    <link href="css/custom.css" rel="stylesheet" />
+    <script src="js/jquery-3.6.0.min.js"></script>
+</head>
+<style>
+    textarea {
+        vertical-align: bottom;
+    }
+
+    #output {
+        overflow: auto;
+    }
+
+    #output > p {
+        overflow-wrap: break-word;
+    }
+
+    #output span {
+        color: blue;
+    }
+</style>
+<body>
+    <button onclick='setLocation("Contacts.html")'>КОНТАКТЫ</button>
+    <h2>ГЛАВНАЯ</h2>
+    <div style='display:flex;flex-direction:row;width:fit-content'>
+        <button id="button1">Button 100px</button>
+        <button id="button2">Button 200px</button>
+        <button id="button75000">Send 7500</button>
+        <button id="button100500">Send 100500</button>
+    </div>
+    <input type="file" id="file-input" />
+    <textarea cols="60" rows="6"></textarea>
+    <button id="button" onclick='onClickButton()'>send</button>
+    <div id="output"></div>
+    <div id="CONTAINER" style="transition: all 2s ease-out;width:100%;height:auto"></div>
+</body>
+<script>
+    const template = document.createElement("template");
+    const container = document.querySelector("CONTAINER");
+    const button = document.querySelector("#button");
+    var button1 = document.querySelector("#button1");
+    var button2 = document.querySelector("#button2");
+    const button75000 = document.querySelector("#button75000");
+    const button100500 = document.querySelector("#button100500");
+    var output = document.querySelector("#output");
+    const textarea = document.querySelector("textarea");
+    //const inputfile = document.querySelector("#file-input");
+
+    button.addEventListener("click", onClickButton);
+    button1.addEventListener("click", function(){{ onClickButton100();}}, false);
+    button2.addEventListener("click", function(){{ onClickButton200();}}, false);
+    button75000.addEventListener("click", function(){{ onClickButtonX(75000);}}, false);
+    button100500.addEventListener("click", function(){{ onClickButtonX(100000000);}}, false);
+    //inputfile.addEventListener("change", readDataFile, false);
+
+    function onClickButton() {
+       const text = textarea.value;
+       text && doSendString(text);
+       textarea.value = "";
+       textarea.focus();
+    };
+
+    function onClickButton200() {
+        doSendString("button|200px");
+    };
+
+    function onClickButton100() {
+        doSendString("button|100px");
+    };
+
+    function onClickButtonX(len) {
+      let text = "";
+        let mask=['A','B','C','D'];
+        for (let n=0;n<len;n++) { text+= mask[n%4];};
+       doSendString(text);
+    };
+</script>
+</html>

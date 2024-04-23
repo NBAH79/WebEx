@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "WebEx": {
+      "commandName": "Project",
+      "hotReloadEnabled": false
+    }
+  }
+}
