@@ -7,6 +7,6 @@
 Элементы базируются на абстрактном классе WebComponent и Инстанциируются в контейнер.
 Потоковая передача данных поддерживается в базе.
 
-LSON это протокол RPC, синтаксис описан в protocol.txt
+LSON это протокол RPC, синтаксис описан в [protocol.txt](https://github.com/NBAH79/WebEx/blob/master/WebEx/Protocol.txt)
 
 Тестовая страница открывается по адресу http://localhost:8080/index.html
