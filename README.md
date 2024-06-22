@@ -11,8 +11,6 @@ LSON это протокол RPC, синтаксис описан в [protocol.t
 
 Тестовая страница открывается по адресу http://localhost:8080/index.html
 
-Схема системы 
 ![system drawio](https://github.com/NBAH79/WebEx/assets/11296963/3ef5d124-0b6d-40e1-8f71-9d6782ce33cc)
 
-Схема процесса 
 ![process drawio](https://github.com/NBAH79/WebEx/assets/11296963/783daaa4-0337-46cd-82ea-6533cf718ebe)
