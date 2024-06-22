@@ -11,7 +11,7 @@ namespace WebEx
     static class Global
     {
         public static CancellationTokenSource Token = new CancellationTokenSource();
-        public const string WWW = "http://localhost:8080/"; //80 порт не будет работать потому что на нем WebSocket!
+        public const string WWW = "http://localhost:8080/"; //82 порт не будет работать потому что на нем WebSocket!
         public static readonly string XXX = "ws://127.0.0.1:" + PORT; //wss 443
         public static readonly string YYY = "ws://127.0.0.1:" + PORT; //? будет ли wss 443
         public const string IP = "127.0.0.1";
