@@ -11,12 +11,12 @@ namespace WebEx
     static class Global
     {
         public static CancellationTokenSource Token = new CancellationTokenSource();
-        //public const string ZZZ = "http://127.0.0.1:8080/"; //127.0.0.1 требует админских прав!
         public const string WWW = "http://localhost:8080/"; //80 порт не будет работать потому что на нем WebSocket!
         public static readonly string XXX = "ws://127.0.0.1:" + PORT; //wss 443
-        public const string YYY = "ws://127.0.0.1";//wss 443
+        public static readonly string YYY = "ws://127.0.0.1:" + PORT; //? будет ли wss 443
         public const string IP = "127.0.0.1";
-        public const int PORT = 80; //только на 80 и работает, но так и надо!
+        public const int PORT = 82; 
+        
         //если 443, то и wss дописать и сертификат надо!
     };
 
@@ -58,7 +58,7 @@ namespace WebEx
             if (args.Length < 4)
             {
                 Console.WriteLine("Command line parameters: WWWAddress WSSAddress Port Meta.html");
-                Console.WriteLine("Example: http://localhost:8080/ 127.0.0.1 80 meta.html");
+                Console.WriteLine($"Example: {Global.WWW} {Global.IP} {Global.PORT} meta.html");
                 Console.WriteLine(">>> RUNNING IN LOCAL DEMO MODE <<<");
                 //сюда можно перелить аргументы командной строки
                 await grinder.Run(
